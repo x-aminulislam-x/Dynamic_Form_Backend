@@ -6,7 +6,7 @@ const fs = require('fs');
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
-const port = 7000;
+const port = process.env.PORT || 7000;
 
 app.post('/form_publish/:form_id', (req, res) => {
     const { form_id } = req.params;
