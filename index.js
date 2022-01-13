@@ -8,6 +8,8 @@ app.use(bodyParser.json());
 app.use(cors());
 const port = process.env.PORT || 7000;
 
+// https://dynamicform-1cc.herokuapp.com/
+
 app.post('/form_publish/:form_id', (req, res) => {
     const { form_id } = req.params;
     const form_data = req.body;
